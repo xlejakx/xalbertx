@@ -1,454 +1,508 @@
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  background-color: #000; /* Черный фон */
-  color: #fff; /* Белый текст */
-  padding: 60px; /* Отступ от краев страницы */
-}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: #000; /* Черный фон */
+            color: #fff; /* Белый текст */
+            padding: 60px; /* Отступ от краев страницы */
+            position: relative;
+            height: 100vh; 
+        }
+        .menu { position: absolute;
+                left: 369px; 
+                top: 40px; 
+                font-size: 13px; 
+                opacity: 0;
+            }
+        .nav-item, .project, .services, .contacts, .number {
+            position: absolute;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            transition: opacity 0.3s ease, font-weight 0.3s ease;
+        }
 
-.nav-item, .project, .services, .contacts, .number {
-  position: absolute;
-  font-size: 14px;
-  color: #fff;
-  cursor: pointer;
-  transition: opacity 0.3s ease, font-weight 0.3s ease;
-}
+        .about {
+            position: absolute;
+            left: 977px;
+            top: 60px;
+            font-size: 14px; /* Размер шрифта для десктопа */
+            font-weight: 500; /* Montserrat Medium */
+            transition: font-weight 0.3s, opacity 0.3s ease; /* Плавный переход */
+            cursor: pointer; /* Указатель при наведении */
+            text-decoration: none; /* Убираем подчеркивание у ссылки */
+            color: #fff; /* Цвет текста */
+        }
+        .about:hover {
+            font-weight: 700; /* Montserrat Bold */
+        }
 
-.about {
-  position: absolute;
-  left: 977px;
-  top: 60px;
-  font-size: 14px; /* Размер шрифта для десктопа */
-  font-weight: 500; /* Montserrat Medium */
-  transition: font-weight 0.3s, opacity 0.3s ease; /* Плавный переход */
-  cursor: pointer; /* Указатель при наведении */
-  text-decoration: none; /* Убираем подчеркивание у ссылки */
-  color: #fff; /* Цвет текста */
-}
-.about:hover {
-  font-weight: 700; /* Montserrat Bold */
-}
+        .project {
+            left: 1128px;
+            top: 60px;
+        }
 
-.project {
-  left: 1128px;
-  top: 60px;
-}
+        .services {
+            left: 1222px;
+            top: 60px;
+        }
 
-.services {
-  left: 1222px;
-  top: 60px;
-}
+        .contacts {
+            left: 1317px;
+            top: 60px;
+        }
+        .number, .Telegram {
+            position: absolute;
+            font-size: 13px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .number {
+            top: 95px;
+            left: 1317px;
+        }
+        .Telegram {
+            top: 129px;
+            left: 1317px;
+        }
 
-.contacts {
-  left: 1317px;
-  top: 60px;
-}
-.number, .Telegram {
-  position: absolute;
-  font-size: 13px;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.number {
-  top: 95px;
-  left: 1317px;
-}
-.Telegram {
-  top: 129px;
-  left: 1317px;
-}
+        .finance, .Legalsupport {
+            position: absolute;
+            font-size: 13px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-.finance, .Legalsupport {
-  position: absolute;
-  font-size: 13px;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+        .finance {
+            top: 95px;
+            left: 1128px;
+        }
 
-.finance {
-  top: 95px;
-  left: 1128px;
-}
+        .Legalsupport {
+            top: 129px;
+            left: 1128px;
+        }
 
-.Legalsupport {
-  top: 129px;
-  left: 1128px;
-}
-
-.Finfrog {
-  position: absolute;
-  left: 60px;
-  top: 60px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-
-
-.Digitalassets {
-  position: absolute;
-  left: 60px;
-  top: 431px;
-  font-size: 32px;
-  font-weight: 700;
-}
-img {
-  position: absolute;
-  left: 573px;
-  top: 250px;
-  width: 300px; /* Ширина изображения */
-  height: 375px; /* Высота изображения */
-}
-.Globalopportunities {
-  position: absolute;
-  left: 1035px;
-  top: 431px;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.Consulting, .solutions, .technologies {
-  position: absolute;
-  left: 60px;
-  font-size: 16px;
-  opacity: 0.5;
-}
-
-.Consulting {
-  top: 540px;
-}
-
-.solutions {
-  top: 560px;
-}
-
-.technologies {
-  top: 580px;
-}
-
-/* Стили для второй части */
-
-.container {display: grid; /* Включаем CSS Grid */
-grid-template-columns: repeat(5, 1fr); /* Три колонки равной ширины */
-
-}
-
-.column {
-min-width: 80px; /* Минимальная ширина */
-text-align: left; /* Выравнивание текста */
-font-size: 14px; /* Размер шрифта */
-
-}
+        .Finfrog {
+            position: absolute;
+            left: 60px;
+            top: 60px;
+            font-size: 16px;
+            font-weight: 700;
+        }
 
 
-.word {
-  position: relative;
-  white-space: nowrap;
-  margin-bottom: 3px;
-}
 
-.word::after {
-  content: '+';
-  position: absolute;
-  top: -15px;
-  left: 100%;
-  margin-left: -100px;
-}
-.word2 {
-  position: relative;
-  white-space: nowrap;
-  margin-bottom: 3px; 
-  opacity: 1;
+        .Digitalassets {
+            position: absolute;
+            left: 60px;
+            top: 431px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        img {
+            position: absolute;
+            left: 573px;
+            top: 250px;
+            width: 300px; /* Ширина изображения */
+            height: 375px; /* Высота изображения */
+        }
+        .Globalopportunities {
+            position: absolute;
+            left: 1035px;
+            top: 431px;
+            font-size: 32px;
+            font-weight: 700;
+        }
 
-}
+        .Consulting, .solutions, .technologies {
+            position: absolute;
+            left: 60px;
+            font-size: 16px;
+            opacity: 0.5;
+        }
 
-.word2::after {
-  content: '+';
-  position: absolute;
-  top: -15px;
-  left: 100%;
-  margin-left: 10px;
-  
-}
+        .Consulting {
+            top: 540px;
+        }
+
+        .solutions {
+            top: 560px;
+        }
+
+        .technologies {
+            top: 580px;
+        }
+        .scroll-container {
+            display: flex; /* Горизонтальное выравнивание */
+            overflow-x: auto; /* Горизонтальный скроллинг */
+            width: 100%; /* Занять всю ширину */
+            border: 1px solid #000; /* Для визуализации границ контейнера */
+            padding: 0px; /* Отступ внутри контейнера */
+            box-sizing: border-box; /* Запрет переноса строк */
+        }
+
+        .issue-container {
+            width: 200px; /* Ширина контейнера */
+            background-color: #000; /* Фоновый цвет для контейнера */
+            padding: 0px; /* Отступы внутри контейнера */
+            color: #f9f9f9;
+            margin-right: 100px; /* Отступ между элементами */
+            box-sizing: border-box; /* Учитывать padding в ширине */
+            flex-shrink: 0; /* Запрет на сжатие элементов */
+            margin-top: 700px;
+        }
+
+        .header {
+            font-weight: bold; /* Жирный шрифт для заголовка */
+            font-size: 24px;
+            margin-bottom: 15px; /* Отступ снизу заголовка */
+        }
+
+        .item {
+            margin-bottom: 10px; /* Отступ между элементами */
+            font-size: 14px;
+            opacity: 0.5;
+        }
 
 
-.header {
-  font-weight: bold;
-  font-size: 24px;
-}
-.header {
-  font-weight: bold;
-  font-size: 24px;
-}
-.row-1 {
-  margin-bottom: 27px;
-}
-.row-2 {
-  margin-bottom: 15px;
-}
-.row-3 {
-  margin-bottom: 15px;
-}
-.row-5 {
-  margin-bottom: 15px;
-  top: 1200px;
-  left: 840px;
-}
+        .word {
+            position: relative;
+            white-space: nowrap;
+            margin-bottom: 3px;
+        }
 
-.offset {
-  margin-top: 700px;
-}
-.Legal {
-  position: absolute;
-  left: 60px;
-  top: 1172px;
-  font-size: 24px; /* Размер шрифта для десктопа */
-  font-weight: 700;
-  
-}
-.Investing, .Opening, .foreign, .estate, .registration {
-  position: absolute;
-  left: 639px;
-  top: 1172px;
-  font-size: 16px; /* Размер шрифта для десктопа */
-  font-weight: 500;
-  opacity: 0.5;
-  transition: top 1s, opacity 5s;
-  
-}
-.Investing  {
-  top: 1187px;
-  cursor: pointer; /* Указатель при наведении */
-  transition: opacity 0.3s ease;
-}
+        .word::after {
+            content: '+';
+            position: absolute;
+            top: -15px;
+            left: +10px;
+            margin-left: -100px;
+        }
+        .word2 {
+            position: relative;
+            white-space: nowrap;
+            margin-bottom: 3px; 
+            opacity: 1;
 
-.column2 {
-  position: absolute;
-  left: 750px; /* Позиция по оси X */
-  top: 1193px;  /* Позиция по оси Y */
-  text-align: left; /* Выровнено по левому краю */
-  opacity: 0;
-  transition: font-weight 0.3s, opacity 0.3s ease;
-  font-size: 14px;
-}
-.column2 div {
-margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
+        }
+
+        .word2::after {
+            content: '+';
+            position: absolute;
+            top: -15px;
+            left: 100%;
+            margin-left: 10px;
+            
+        }
+
+
+        .header {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .offset {
+            margin-top: 700px;
+        }
+        .Legal {
+            position: absolute;
+            left: 60px;
+            top: 1172px;
+            font-size: 24px; /* Размер шрифта для десктопа */
+            font-weight: 700;
+            
+        }
+        .Investing, .Opening, .foreign, .estate, .registration {
+            position: absolute;
+            left: 639px;
+            top: 1172px;
+            font-size: 16px; /* Размер шрифта для десктопа */
+            font-weight: 500;
+            opacity: 0.5;
+            transition: top 1s, opacity 5s;
+            
+        }
+        .Investing  {
+            top: 1187px;
+            cursor: pointer; /* Указатель при наведении */
+            transition: opacity 0.3s ease;
+        }
+
+        .column2 {
+            position: absolute;
+            left: 750px; /* Позиция по оси X */
+            top: 1193px;  /* Позиция по оси Y */
+            text-align: left; /* Выровнено по левому краю */
+            opacity: 0;
+            transition: font-weight 0.3s, opacity 0.3s ease;
+            font-size: 14px;
+        }
+        .column2 div {
+    margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
 }
 
 .column3 {
-  position: absolute;
-  left: 877px; /* Позиция по оси X */
-  top: 1240px;  /* Позиция по оси Y */
-  text-align: left; /* Выровнено по левому краю */
-  opacity: 0;
-  transition: font-weight 0.3s, opacity 0.3s ease;
-  font-size: 14px;
-}
-.column3 div {
-margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
+            position: absolute;
+            left: 877px; /* Позиция по оси X */
+            top: 1240px;  /* Позиция по оси Y */
+            text-align: left; /* Выровнено по левому краю */
+            opacity: 0;
+            transition: font-weight 0.3s, opacity 0.3s ease;
+            font-size: 14px;
+        }
+        .column3 div {
+    margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
 }
 
 .column4 {
-  position: absolute;
-  left: 877px; /* Позиция по оси X */
-  top: 1290px;  /* Позиция по оси Y */
-  text-align: left; /* Выровнено по левому краю */
-  opacity: 0;
-  transition: font-weight 0.3s, opacity 0.3s ease;
-  font-size: 14px;
-}
-.column4 div {
-margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
+            position: absolute;
+            left: 877px; /* Позиция по оси X */
+            top: 1290px;  /* Позиция по оси Y */
+            text-align: left; /* Выровнено по левому краю */
+            opacity: 0;
+            transition: font-weight 0.3s, opacity 0.3s ease;
+            font-size: 14px;
+        }
+        .column4 div {
+    margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
 }
 .column5 {
-  position: absolute;
-  left: 980px; /* Позиция по оси X */
-  top: 1335px;  /* Позиция по оси Y */
-  text-align: left; /* Выровнено по левому краю */
-  opacity: 0;
-  transition: font-weight 0.3s, opacity 0.3s ease;
-  font-size: 14px;
-}
-.column5 div {
-margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
-}
-
-.Opening {
-  top: 1235px;
+            position: absolute;
+            left: 980px; /* Позиция по оси X */
+            top: 1335px;  /* Позиция по оси Y */
+            text-align: left; /* Выровнено по левому краю */
+            opacity: 0;
+            transition: font-weight 0.3s, opacity 0.3s ease;
+            font-size: 14px;
+        }
+        .column5 div {
+    margin-bottom: 15px; /* Установите желаемое расстояние между элементами */
 }
 
-.foreign  {
-  top: 1283px;
-}
+       .Opening {
+            top: 1235px;
+        }
 
-.estate {
-  top: 1331px;
-}
+        .foreign  {
+            top: 1283px;
+        }
 
-.registration  {
-  top: 1387px;
-}
-.move-down {
-top: calc(var(--original-top) + 112px); /* Опускаем на 500px */
+        .estate {
+            top: 1331px;
+        }
+
+        .registration  {
+            top: 1387px;
+        }
+        .move-down {
+    top: calc(var(--original-top) + 112px); /* Опускаем на 500px */
 }
 .move-down-300 {
-top: calc(var(--original-top) + 280px); /* Опускаем на 300px для foreign */
+    top: calc(var(--original-top) + 280px); /* Опускаем на 300px для foreign */
 }
 
-.contactus  {
-  top: 1387px;
-  position: absolute;
-  left: 1100px;
-  font-size: 16px; /* Размер шрифта для десктопа */
-  font-weight: 500;
-  opacity: 1;
+        .contactus  {
+            top: 1387px;
+            position: absolute;
+            left: 1100px;
+            font-size: 16px; 
+            font-weight: 500;
+            opacity: 1;
+            
+        }
+
+        @media (max-width: 450px) {
+
+            body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: #000; /* Черный фон */
+            color: #fff; /* Белый текст */
+            padding: 30px; /* Отступ от краев страницы */
+            position: relative;
+            height: 100vh; 
+            max-width: 450px;
+        }
+            .Finfrog {
+                left: 30px;
+                top: 30px; 
+                font-size: 16px; 
+            }
+            .menu {
+                position: absolute;
+              left: 340px;
+                top: 30px; 
+                font-size: 13px; 
+                opacity: 1;
+            }
+            .Consulting {
+                left: 30px; 
+                top: 120px; 
+                font-size: 14.34px; 
+            }
+            .solutions {
+                left: 30px; /* Уменьшаем отступы */
+                top: 140px; /* Уменьшаем отступы */
+                font-size: 14.34px; /* Уменьшаем размер шрифта в 2 раза */
+            }
+            .technologies {
+                left: 30px; /* Уменьшаем отступы */
+                top: 160px; /* Уменьшаем отступы */
+                font-size: 14.34px; /* Уменьшаем размер шрифта в 2 раза */
+            }
+            .about {
+                left: 296px; /* Уменьшаем отступы */
+                top: 80px; /* Уменьшаем отступы */
+                font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
+                opacity: 0;
+            }
+            .services {
+                left: 340px; /* Уменьшаем отступы */
+                top: 120px; /* Уменьшаем отступы */
+                font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
+                opacity: 0;
+            }
+            .project {
+                left: 349px; /* Уменьшаем отступы */
+                top: 160px; /* Уменьшаем отступы */
+                font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
+                opacity: 0;
+            }
+            .finance {
+            top: 160px;
+            left: 200px;
+            opacity: 0;
+        }
+
+        .Legalsupport {
+            top: 180px;
+            left: 200px;
+            opacity: 0;
+        }
+
+
+            .contacts {
+                left: 340px; /* Уменьшаем отступы */
+                top: 200px; /* Уменьшаем отступы */
+                font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
+                opacity: 0;
+            }
+
+            .number{
+                left: 200px; /* Уменьшаем отступы */
+                top: 200px; /* Уменьшаем отступы */
+                font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
+                opacity: 0;
+            }
+            .Telegram{
+                left: 200px; /* Уменьшаем отступы */
+                top: 220px; /* Уменьшаем отступы */
+                font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
+                opacity: 0;
+            }
+
+            .Digitalassets{
+            left: 30px; /* Уменьшаем отступы */
+                top: 600px; /* Уменьшаем отступы */
+                font-size: 32px; /* Уменьшаем размер шрифта в 2 раза */
+            }
+            .Globalopportunities {
+                left: 30px; 
+                top: 660px;
+                font-size: 32px; 
+            }
+            .Legal {
+            position: absolute;
+            left: 30px;
+            top: 1072px;
+            font-size: 24px; /* Размер шрифта для десктопа */
+            font-weight: 700;
+            
+        }
+            img {
+            left: 95px;
+            top: 250px;
+            width: 206px; 
+            height: 233px; 
+        }
+        .issue-container {
+            width: 200px; /* Ширина контейнера */
+            background-color: #000; /* Фоновый цвет для контейнера */
+            padding: 0px; /* Отступы внутри контейнера */
+            color: #f9f9f9;
+            margin-right: 15px; /* Отступ между элементами */
+            box-sizing: border-box; /* Учитывать padding в ширине */
+            flex-shrink: 0; /* Запрет на сжатие элементов */
+            margin-top: 770px;
+        }
+        
+
+        .header {
+            font-weight: bold; /* Жирный шрифт для заголовка */
+            font-size: 24px;
+            margin-bottom: 25px; /* Отступ снизу заголовка */
+        }
+
+        .item {
+            margin-bottom: 20px; /* Отступ между элементами */
+            font-size: 14px;
+            opacity: 0.5;
+        }
   
-}
+        
+        
+        .Investing  {
+            left: 30px;
+            top: 1150px;
+            cursor: pointer; 
+            transition: opacity 0.3s ease;
+        }
+        .column2 {
+            position: absolute;
+            left: 30px; /* Позиция по оси X */
+            top: 1170px; 
+        }
+        .Opening {
+            left: 30px;
+            top: 1200px;
+        }
+        .column3 {
+            position: absolute;
+            left: 30px; /* Позиция по оси X */
+            top: 1220px; 
+        }
 
-@media (max-width: 450px) {
-  .Finfrog {
-      left: 30px; /* Уменьшаем отступы */
-      top: 30px; /* Уменьшаем отступы */
-      font-size: 16px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .menu {
-      left: 369px; /* Уменьшаем отступы */
-      top: 40px; /* Уменьшаем отступы */
-      font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .Consulting {
-      left: 30px; /* Уменьшаем отступы */
-      top: 120px; /* Уменьшаем отступы */
-      font-size: 14.34px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .solutions {
-      left: 30px; /* Уменьшаем отступы */
-      top: 140px; /* Уменьшаем отступы */
-      font-size: 14.34px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .technologies {
-      left: 30px; /* Уменьшаем отступы */
-      top: 160px; /* Уменьшаем отступы */
-      font-size: 14.34px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .about {
-      left: 296px; /* Уменьшаем отступы */
-      top: 80px; /* Уменьшаем отступы */
-      font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .services {
-      left: 340px; /* Уменьшаем отступы */
-      top: 110px; /* Уменьшаем отступы */
-      font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .project {
-      left: 349px; /* Уменьшаем отступы */
-      top: 140px; /* Уменьшаем отступы */
-      font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .contacts {
-      left: 340px; /* Уменьшаем отступы */
-      top: 170px; /* Уменьшаем отступы */
-      font-size: 13px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .Digitalassets{
-  left: 30px; /* Уменьшаем отступы */
-      top: 600px; /* Уменьшаем отступы */
-      font-size: 32px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  .Globalopportunities {
-      left: 30px; /* Уменьшаем отступы */
-      top: 660px; /* Уменьшаем отступы */
-      font-size: 32px; /* Уменьшаем размер шрифта в 2 раза */
-  }
-  img {
-  left: 112px;
-  top: 250px;
-  width: 206px; /* Ширина изображения */
-  height: 233px; /* Высота изображения */
-}
-.container {display: grid; /* Включаем CSS Grid */
-grid-template-columns: repeat(5, 1fr); /* Три колонки равной ширины */
-gap: 120px; /* Отступы между элементами */
-margin: 0 0px;
-margin-bottom: 20px; 
-padding: px 0; /* Добавить немного отступа сверху и снизу */
-scrollbar-width: thin; /* Для Firefox, чтобы сделать полосу прокрутки тонкой */
-}
-
-/* Для WebKit браузеров (Chrome, Safari) */
-.container::-webkit-scrollbar {
-height: 8px; /* Высота полосы прокрутки */
-}
-
-.container::-webkit-scrollbar-thumb {
-background: #000; /* Цвет полосы прокрутки */
-border-radius: 10px; /* Закругление краев полосы прокрутки */
-}
-
-.container::-webkit-scrollbar-thumb:hover {
-background: #000; /* Цвет полосы прокрутки при наведении */
-}
-
-.word {
-position: relative;
-white-space: nowrap;
-margin-bottom: 3px;
-padding: 10px; /* Добавить немного отступа для удобства */
-min-width: 100px; /* Минимальная ширина для каждого элемента */
-text-align: center; /* Центрирование текста */
-}
-
-.word::after {
-content: '+';
-position: absolute;
-top: -15px;
-left: 100%;
-margin-left: -100px;
-}
-.column {
-min-width: 80px; /* Минимальная ширина */
-text-align: left; /* Выравнивание текста */
-font-size: 14px; /* Размер шрифта */
-
-}
-.offset {
-  margin-top: 700px;
-}
-.Investing  {
-  left: 30px;
-  top: 1365px;
-  cursor: pointer; /* Указатель при наведении */
-  transition: opacity 0.3s ease;
-}
-.Opening {
-  left: 30px;
-  top: 1395px;
-}
-
-.foreign  {
-  left: 30px;
-  top: 1425px;
-}
-
-.estate {
-  left: 30px;
-  top: 1455px;
-}
-
-.registration  {
-  left: 30px;
-  top: 1485px;
-}
-.contactus  {
-  top: 1520px;
-  position: absolute;
-  left: 300px;
-  font-size: 16px; /* Размер шрифта для десктопа */
-  font-weight: 500;
-  opacity: 1;
-  
-}
-}
+        .foreign  {
+            left: 30px;
+            top: 1250px;
+        }
+        .column4 {
+            position: absolute;
+            left: 30px; /* Позиция по оси X */
+            top: 1270px; 
+        }
+        .estate {
+            left: 30px;
+            top: 1300px;
+        }
+        .column5 {
+            position: absolute;
+            left: 30px; /* Позиция по оси X */
+            top: 1320px; 
+        }
+        .registration  {
+            left: 30px;
+            top: 1350px;
+        }
+        .contactus  {
+            top: 1450px;
+            position: absolute;
+            left: 270px;
+            font-size: 16px; 
+            font-weight: 500;
+            opacity: 1;
+            
+        }
+    }
